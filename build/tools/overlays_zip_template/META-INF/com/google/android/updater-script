@@ -1,5 +1,5 @@
 ui_print(" =============================================");
-ui_print("    ArrowOS overlays package");
+ui_print("    Project Atlantis overlays package");
 ui_print(" =============================================");
 ui_print(" ");
 sleep(1);
