@@ -17,6 +17,8 @@ ATLANTIS_MOD_VERSION = EXPERIMENTAL
 ATLANTIS_BUILD_TYPE := UNOFFICIAL
 ATLANTIS_BUILD_ZIP_TYPE := VANILLA
 
+ATLANTIS_MAINTAINER?=NOBODY
+
 ifeq ($(ATLANTIS_GAPPS), true)
     $(call inherit-product, vendor/gapps/common/common-vendor.mk)
     ATLANTIS_BUILD_ZIP_TYPE := GAPPS
@@ -46,6 +48,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.atlantis.version=$(ARLANTIS_VERSION) \
   ro.atlantis.releasetype=$(ATLANTIS_BUILD_TYPE) \
   ro.atlantis.ziptype=$(ATLANTIS_BUILD_ZIP_TYPE) \
+  ro.atlantis.maintainer=$(ATLANTIS_MAINTAINER) \
   ro.modversion=$(ATLANTIS_MOD_VERSION)
 
 ATLANTIS_DISPLAY_VERSION := Atlantis-$(ATLANTIS_MOD_VERSION)-$(ATLANTIS_BUILD_TYPE)
